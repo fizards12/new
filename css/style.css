@@ -7,6 +7,11 @@
     src: url("../fonts/onyx/ONYX.TTF");
 }
 
+@font-face{
+    font-family: Comicimport;
+    src: url("../fonts/Comic/COMIC.TTF");
+}
+
 html{
     height: 100%;
 }
@@ -553,8 +558,8 @@ input[name="log"]:hover{
     margin-bottom: 2% ;
     grid-area: labels;
     font-size: calc(1vw + 1vh);
-    font-family:'Turret Road';
-    font-weight: bolder;
+    font-family:Comicimport;
+    font-weight:bold;
     justify-self: start;
     color: #2541B2;
 }
