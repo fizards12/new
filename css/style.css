@@ -1,6 +1,12 @@
 * {
     box-sizing: border-box;
 }
+
+@font-face{
+    font-family: onyximport;
+    src: url("../fonts/onyx/ONYX.TTF");
+}
+
 html{
     height: 100%;
 }
@@ -300,6 +306,7 @@ input[name="log"]:hover{
 
 /*Logo Properties*/
 .Logo{
+    border: solid black 1px;
     grid-area: Logo;
     
     height:70%;
@@ -312,8 +319,8 @@ input[name="log"]:hover{
 }
 
 .hLogo{
-    height:14vh;
-    width: 400px;
+    height:100%;
+    width: 80%;
 }
 /*Logout & Home buttons properties*/
 .HomeAndLog{
@@ -352,8 +359,9 @@ input[name="log"]:hover{
 .button{
     width: 7vw;
     height: 100%;
-    border-radius: 3.5vh;
+    border-radius: 4vh;
     font-family: Onyx;
+
     font-style: normal;
     font-weight: normal;
     font-size: 2.5vw;
@@ -543,7 +551,7 @@ input[name="log"]:hover{
     margin-bottom: 2% ;
     grid-area: labels;
     font-size: calc(1vw + 1vh);
-    font-family:'Turret Road', cursive;;
+    font-family:'Turret Road';
     font-weight: bolder;
     justify-self: start;
     color: #2541B2;
@@ -587,7 +595,7 @@ input[name="View"]{
     width: 15vw;
     min-width: 200px;
     text-align: center;
-    font-family: Times New Roman;
+    font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight: normal;
     font-size: 1.1vw;
@@ -603,8 +611,8 @@ input[name="View"]{
     align-items: center;
     justify-content: flex-start;
 }
-.fLogo svg{
-    width: 30%;
+.fLogo img{
+    width: 40%;
     height: 6vh;
 
 }
@@ -654,6 +662,10 @@ input[name="View"]{
     .AdSetIcon{
         width: 100%;
         height: fit-content;
+    }
+
+    .adminName{
+        font-size: 80%;
     }
     
     .body{
