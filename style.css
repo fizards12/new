@@ -1,0 +1,933 @@
+* {
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    background-image: url('../images/backgrauand.png');
+    background-position: center;
+    background-size: cover;
+    margin: 0px;
+}
+/* start main items */
+/******start header ******/
+.header_container{
+    background-image: url("../images/header_background.png");
+    width: 100%;
+    height: 245px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#right_side{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+#left_side{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+}
+.webname_header{
+    align-items: center;
+    width: 363px;
+    height: 130px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.setting_item{
+    width: 100px;
+    height: 100px;
+    padding-left: 30px;
+    padding-top: 50px;
+}
+#admin_name{
+    font-size: 30px;
+    padding-top: 55px;
+    color: #2541B2;
+    width: -webkit-fill-available;
+}
+.home_icon{
+    width: 50px;
+    height: 50px;
+    margin-left: 75px;
+    margin-top: 60px;
+    margin-right: 5px;
+}
+#logout{
+    display: block;
+    font-weight: bolder;
+    width: 100px;
+    height: 75px;
+    margin-top: 50px;
+    margin-left: 10px;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 20px;
+    color: #2541B2;
+    margin-right: 15px;
+}
+/******end header ******/
+/* end main items */
+
+/* login starting */
+
+.login_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    /*background-color: aqua;*/
+    align-items: center;
+    margin-top: 4%;
+}
+
+
+.webname{
+    /*background-color: crimson;*/
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3%;
+}
+.webname img{
+    display: block;
+    /*background-color: aqua;*/
+    text-align: center;
+    margin-left: 38%;
+    width: 28vw;
+}
+#form1{
+    /*background-color: darkblue;*/
+    width: 80%;
+    margin-right: 2%;
+}
+.lab{
+    display: inline-block;
+    font-size: 2.5vw;
+    text-align: center;
+    width: 20%;
+    font-weight: bolder;
+    font-family: 'Turret Road', cursive;
+    color: #2541B2;
+    margin: 2% 0% 5% 10%;
+}
+.in{
+    display: inline-block;
+    height: 8vh;
+    width: 45vw;
+    padding: 1%;
+    outline: 0px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 1%;
+}
+.in:focus{
+    outline: #2541b2 3px solid;
+}
+input[name="log"]{
+    display: block;
+    font-weight: bolder;
+    width: 20%;
+    padding: 3%;
+    line-height: 10%;
+    background-color: white;
+    text-align: center;
+    font-size: 2vw;
+    border-radius: 20px;
+    margin-left: 48%;
+    color: #2541B2;
+}
+input[name="log"]:hover{
+    background: #E5D549;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+@media only screen and (max-width: 769px) {
+    .login_container {
+        margin-top: 20%;
+        }
+        .in{
+            height: 6vh;
+    }
+    input[name="log"]{
+        margin-left: 50%;
+    }
+    .webname img{
+        margin-left: 42%;
+    }
+  }
+  @media only screen and (max-width: 426px) {
+    .login_container {
+        margin-top: 45%;
+        }
+    .in{
+            margin-bottom: 8%;
+            height: 5vh;
+    }
+    .lab{
+        font-size: 4vw;
+        width: 35%;
+    }
+    #form1{
+        margin-right: 17%;
+        width: 90%;
+    }
+    input[name="log"]{
+        margin-left: 59%;
+        font-size: 3vw;
+    }
+    .webname img{
+        margin-left: 44%;
+    }
+  }
+/* login ending */
+
+/*admin settings starting*/
+
+.Admin_settings{
+    align-self: flex-start;
+    margin-left: 3%;
+    margin-bottom: 2%;
+    font-family: 'Turret Road', cursive;
+    color: #2541B2;
+    font-size: 4vw;
+    text-shadow: 3px 3px #E5D549 ;
+    font-weight: bold;
+    background-color: burlywood;
+}
+
+#form2{
+    background-color: darkblue;
+    width: 80%;
+}
+.lab2{
+    display: inline-block;
+      font-size: 1.8vw;
+      text-align: center;
+      width: 22%;
+      font-weight: bolder;
+      font-family: 'Turret Road', cursive;
+      color: #2541B2;
+      margin: 0% 0% 3% 10%;
+}
+
+/* admin settings ending */
+
+/*
+    ****************
+    Router1 Page
+    **************** 
+*/
+
+/******Main body******/
+#body{
+    width:100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas: "header" "body" "footer";
+    
+    
+}
+/******Header Begins******/
+.hcontainer{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    
+}
+.heading {
+    width: 100%;
+    height:calc(10vh + 5vw);
+    background: url("../images/header_background.png");
+    background-size:100vw 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.heading_container{
+    height:100%;
+    display: grid;
+    width: 98vw;
+    grid-template-columns: 15% 25% 10%;
+    grid-template-areas: "Admin Logo buttons";
+    column-gap: 25%;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+/*adminSettingsIcon properties*/
+.adminSettings{
+    border: black solid 1px;
+    grid-area: Admin;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    height: 50%;
+
+    grid-template-columns: 25% 80%;
+    grid-template-areas: "Icon Name";
+    column-gap: 0.3vw;
+}
+.AdSetIcon{
+    grid-area: Icon;
+    height: 60%;
+    width: 100%;
+}
+
+/*adminName properties*/
+.adminName{
+    display: flex;
+    margin:0;
+    width: 100%;
+    height: 100%;
+    grid-area: Name;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    justify-content: start;
+    align-items: center;
+    font-size:2vmax;
+    line-height: 100%;
+    color: #2541B2;
+}
+
+/*Logo Properties*/
+.Logo{
+    grid-area: Logo;
+    
+    height:70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-bottom: 10%;
+    
+}
+
+.hLogo{
+    height:14vh;
+    width: 400px;
+}
+/*Logout & Home buttons properties*/
+.HomeAndLog{
+    border: solid black 1px;
+    grid-area: buttons;
+    height: 50%;
+    display: grid;
+    align-items:center;
+    column-gap: 1vw;
+    grid-template-columns:auto auto;
+    grid-template-areas:"home Logout";
+    justify-content: end;
+}
+
+#f1{
+    grid-area: home;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.HIcon{
+    
+    width: 3vw;
+    margin-bottom: 20%;
+}
+
+#f2{
+    grid-area: Logout;
+    height:70%;
+    display: flex;
+    align-items: center;
+    
+    
+}
+.button{
+    width: 7vw;
+    height: 100%;
+    border-radius: 3.5vh;
+    font-family: Onyx;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5vw;
+    line-height: 50%;
+    /* identical to box height */
+    color: #2541B2;
+    text-align: center;
+    text-justify:inter-word;
+
+}
+.button:hover {
+    background: #e9d520;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+/******Header ends******/
+
+
+/******Body Begins******/
+.body{
+    width:100%;
+    grid-area: body;
+    display: grid;
+    grid-template-columns: 15vw auto;
+    grid-template-areas: "menu SECs";
+}
+.barBG{
+    position:absolute;
+    width: 15%;
+    height: 100%;
+    z-index: -1;
+    background-color: white;
+}
+.barBG img{
+    display: none;
+}
+
+.Sbar{
+    display: none;
+    flex-direction: column;
+    row-gap: 32vh;
+}
+
+
+.menu{
+    grid-area: menu;
+    display: grid;
+    grid-template-rows: 20% 20% 20%;
+    row-gap: 15%;
+    grid-template-areas: "R1" "R2" "R3";
+}
+.clr{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% auto;
+    align-items:center;
+    justify-content: center;
+    grid-template-areas: "Ic R";
+    
+}
+
+.clr svg{
+    margin-top: 10%;
+    width: 100%;
+    grid-area: Ic;
+}
+.clr p{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    height: auto;
+    grid-area: R;
+    font-size: 20pt;
+    color: #2541B2;
+}
+
+.Secs{
+    grid-area: SECs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width:98%;
+    height:95%;
+}
+
+.sec{
+    height: 100%;
+    display:grid;
+    row-gap: 5%;
+    grid-template-columns: 5% 95%;
+    grid-template-rows: 10% 85%;
+    grid-template-areas: "header header" "empty Settings";
+}
+
+.name{
+    border: black solid 1px;
+    margin: 0px;
+    grid-area: header;
+    font-family: Comic Sans MS;
+    font-style: normal;
+    font-weight: normal;
+    font-size:40pt;
+    line-height: 100%;
+    color: #1768AC;
+    text-shadow: 3px 6px 5px #E5D549;
+    align-self: flex-start;
+}
+.Settings{
+    grid-area: Settings;
+    display: grid;
+    grid-template-rows: 84% 15%;
+    row-gap: 1%;
+    grid-template-areas: "Scontainer" "View";
+    
+}
+
+.Scontainer{
+    display: grid;
+    grid-area: Scontainer;
+    grid-template-columns: auto auto;
+    column-gap: 4%;
+    grid-template-areas: "S1 S2";
+}
+
+.S1{
+    grid-area: S1;
+}
+.S2{
+    grid-area: S2;
+}
+.View{
+    grid-area: View;
+    display: flex;
+    column-gap: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.none{
+    display:none;
+}
+
+
+.dis{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas: "I1" "I2" "I3" "I4" "I5";
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.I5{
+    grid-area: I5;
+}
+.dp{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    grid-template-rows: 100%;
+    grid-template-areas: "labels txts";
+    justify-content: center;
+    align-items: center;
+}
+
+.txts{
+    grid-area: txts;
+
+    width: 100%;
+    min-height: 5vh;
+    text-align: center;
+    font-weight: bolder;
+    border-radius: 2.5vh;
+
+}
+.txts:focus{
+    outline-color: rgb(65, 78, 251);
+    outline-width: 1px;
+}
+
+.label{
+    line-height: 100%;
+    margin-bottom: 2% ;
+    grid-area: labels;
+    font-size: calc(1vw + 1vh);
+    font-family:'Turret Road', cursive;;
+    font-weight: bolder;
+    justify-self: start;
+    color: #2541B2;
+}
+
+
+input[name="View"]{
+    height: 80%;
+}
+
+.Next , .Back{
+    height: 80%;
+}
+
+
+
+
+/******Body Ends******/
+
+/******Footer Begins******/
+.footer{
+    grid-area: footer;
+    width: 100vw;
+    background: url("../images/footer_background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: grid;
+    grid-template-columns: 40vw 20vw 40vw;
+    grid-template-areas: "fLogo empty team";
+    align-items: center;
+}
+
+.team{
+    grid-area: team;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.team div{
+    width: 15vw;
+    min-width: 200px;
+    text-align: center;
+    font-family: Times New Roman;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.1vw;
+    line-height: 1vh;
+    color: #02186d;
+
+}
+
+
+.fLogo{
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.fLogo svg{
+    width: 30%;
+    height: 6vh;
+
+}
+
+
+/******Footer Ends******/
+
+@media only screen and (max-width: 1280px) {
+    .clr{
+        border: black solid 1px;
+
+    }
+    .clr p{
+        font-size: 150%;
+    }
+    .heading_container{
+        grid-template-columns: 20% 25% 15%;
+        column-gap: 20%;
+    }
+    .adminName{
+        font-size: 2vmax;
+    }
+    .AdSetIcon{
+        width: 85%;
+    }
+    
+}
+
+@media only screen and (max-width: 800px){
+    p{
+        font-size: 10px;
+    }
+    
+    #f2{
+        height: 80%;
+    }
+    .button{
+        width: 70px;
+        font-size: 150%;
+        height: 100%;
+    }
+
+    .HIcon{
+        width: 25px;
+    }
+
+    .AdSetIcon{
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .body{
+        grid-template-columns: 0px auto;
+        
+    }
+    .name{
+        font-size: 25pt;
+        align-self: flex-end;
+    }
+
+    .Scontainer1{
+        grid-template-columns: auto 0px;
+        column-gap: 0px;
+    }
+    .Scontainer2{
+        grid-template-columns: 0px auto;
+        column-gap: 0px;
+    }
+    .inactive{
+        display: none;
+        width: 0px;
+    }
+    .label{
+        font-size: 20px;
+    }
+
+    .clr{
+        display: none;
+    }
+
+    .barBG{
+        z-index: 1;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        top: 10vh;
+
+    }
+
+    .barBG img{
+        display: block;
+        width: 30px;
+        height:30px;
+    }
+
+    
+    .ds{
+        font-family: Segoe UI;
+        font-style: normal;
+        font-weight: normal;
+        height: auto;
+        grid-area: R;
+        font-size: 20px;
+        color: #2541B2;
+    }
+    
+    input[name="View"],.Next , .Back{
+
+        height: 75%;
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    .heading_container{
+        height: 50%;
+        grid-template-columns: 35% 25% 35%;
+        grid-template-areas: "Admin Logo buttons";
+        column-gap: 2.5%;
+    }
+
+    .HIcon{
+        width: 20px;
+        margin-bottom: 10%;
+    }
+    .HomeAndLog{
+        border: 0px;
+        width: 80%;
+        grid-template-columns: 45% 50%;
+        grid-template-areas: "home Logout";
+        column-gap: 5%;
+        justify-self: end;
+    }
+
+    #f1{
+        justify-content: end;
+    }
+    #f2{
+        align-items: center;
+        justify-content: end;
+    }
+    input[name="logout"]{
+        width:100%;
+        font-size: 5vw;
+        text-align: center;
+        height: 80%;
+    }
+
+    .hLogo{
+        margin-left: 10%;
+        align-self: end;
+    }
+    
+    .adminSettings{
+        border: 0px;
+        height: 50%;
+        grid-template-columns: 20% auto;
+    }
+    .AdSetIcon{
+        width: 100%;
+        height: fit-content;
+    }
+    .adminName{
+        font-size: 70%;
+    }
+
+
+    
+}
+
+
+/*
+    **********************
+    Router1 Page Finished
+    ********************** 
+ */
+
+/*
+    **********************
+    Start Router1 Page info
+    ********************** 
+ */
+ .router1{
+     display: none;
+ }
+ .router2{
+    display:inline-block;
+}
+.router3{
+    display:none;
+}
+
+ #infoPage{
+     display: grid;
+     align-items: center;
+    justify-content: center; 
+    margin-top: 35px;
+    }
+ .info{
+    width: 700px;
+    height: 550px;
+    background-color: #ffff;
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px rgb(0 0 0 / 60%);
+    margin: inherit;
+    padding: 30px;
+
+
+ }
+ .return_button{
+    height: 5vh;
+    border-radius: 2vh;
+    border: 0px;
+    align-self: flex-end;
+    font-size: 2vw;
+    line-height: 3vh;
+    justify-content: center;
+    align-content: center;
+    color: #2541B2;
+    cursor: pointer;
+   
+ }
+ .return_button:hover {
+    background: #E5D549;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+ .run_button{
+        width:8vw;
+        min-width: 70px;
+        height: 6vh;    
+        border-radius: 3vh;
+        border:0px;
+        align-self: flex-end;
+        font-family: Onyx;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.5vw;
+        line-height: 3vh;
+        justify-content: center;
+        align-content: center;
+        cursor: pointer;
+        /* identical to box height */
+        color: #2541B2;
+ }
+ .run_button:hover {
+    background: #E5D549;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+.router_info{
+    color: #1768AC;
+    font-size: 60px;
+    width: 400px;
+    margin-left: 125px;
+    text-align: center;
+    font-family: onyx;
+    box-shadow: 5px 5px 10px #e5d549;
+}
+.button_info{
+    text-align: end;
+}
+
+.information{
+    color: #2541B2;
+    display:flex;
+    font-size: large;
+    text-align: center;
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    column-gap: 50px;
+}
+.data{
+    font-size: x-large;
+    font-style: onyx;
+}
+.data_value{
+    color: #858585;
+    font-size: x-large;
+    font-style: onyx;
+}
+@media  (max-width:360px){
+    .info {
+        width: 450px;
+        height: 750px;
+    }
+    .router_info{
+        font-size: 30px;
+         width: 300px;
+         margin-left: 50px;
+    }
+    .return_button{
+        font-size: 20px;
+    }
+    .run_button{
+        font-size: 20px;
+    }
+}
+@media  (max-width:500px){
+    .info {
+        width: 400px;
+        height: 750px;
+    }
+    .router_info{
+         font-size: 30px;
+         width: 300px;
+         margin-top: 15px;
+          margin-left: 25px;
+    }
+    .return_button{
+        font-size: 20px;
+    }
+    .run_button{
+        font-size: 20px;
+    }
+}
+
+ /*
+    **********************
+   End Router1 Page info
+    ********************** 
+ */
