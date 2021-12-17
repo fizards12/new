@@ -250,6 +250,7 @@ input[name="log"]:hover{
 .heading {
     width: 100%;
     height:calc(10vh + 5vw);
+
     background: url("../images/header_background.png");
     background-size:100vw 100%;
     display: flex;
@@ -257,6 +258,7 @@ input[name="log"]:hover{
     
 }
 .heading_container{
+
     height:100%;
     display: grid;
     width: 98vw;
@@ -270,7 +272,7 @@ input[name="log"]:hover{
 
 /*adminSettingsIcon properties*/
 .adminSettings{
-    border: black solid 1px;
+
     grid-area: Admin;
     display: grid;
     align-items: center;
@@ -306,7 +308,7 @@ input[name="log"]:hover{
 
 /*Logo Properties*/
 .Logo{
-    border: solid black 1px;
+
     grid-area: Logo;
     
     height:70%;
@@ -320,11 +322,11 @@ input[name="log"]:hover{
 
 .hLogo{
     height:100%;
-    width: 80%;
+    width: 100%;
 }
 /*Logout & Home buttons properties*/
 .HomeAndLog{
-    border: solid black 1px;
+
     grid-area: buttons;
     height: 50%;
     display: grid;
@@ -460,7 +462,7 @@ input[name="log"]:hover{
 }
 
 .name{
-    border: black solid 1px;
+
     margin: 0px;
     grid-area: header;
     font-family: Comic Sans MS;
@@ -621,10 +623,7 @@ input[name="View"]{
 /******Footer Ends******/
 
 @media only screen and (max-width: 1280px) {
-    .clr{
-        border: black solid 1px;
-
-    }
+    
     .clr p{
         font-size: 150%;
     }
@@ -733,10 +732,12 @@ input[name="View"]{
 
 @media screen and (max-width: 450px) {
     .heading_container{
-        height: 50%;
+        height: 60%;
         grid-template-columns: 35% 25% 35%;
         grid-template-areas: "Admin Logo buttons";
         column-gap: 2.5%;
+        margin-top: 2%;
+        
     }
 
     .HIcon{
@@ -744,18 +745,20 @@ input[name="View"]{
         margin-bottom: 10%;
     }
     .HomeAndLog{
-        border: 0px;
         width: 80%;
         grid-template-columns: 45% 50%;
         grid-template-areas: "home Logout";
         column-gap: 5%;
         justify-self: end;
+        height: 80%;
+
     }
 
     #f1{
         justify-content: end;
     }
     #f2{
+        height: 100%;
         align-items: center;
         justify-content: end;
     }
@@ -763,7 +766,7 @@ input[name="View"]{
         width:100%;
         font-size: 5vw;
         text-align: center;
-        height: 80%;
+        height: 100%;
     }
 
     .hLogo{
@@ -772,8 +775,7 @@ input[name="View"]{
     }
     
     .adminSettings{
-        border: 0px;
-        height: 50%;
+        height: 80%;
         grid-template-columns: 20% auto;
     }
     .AdSetIcon{
