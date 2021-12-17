@@ -612,7 +612,7 @@ input[name="View"]{
     justify-content: flex-start;
 }
 .fLogo img{
-    width: 40%;
+    width: fit-content;
     height: 6vh;
 
 }
@@ -785,7 +785,10 @@ input[name="View"]{
     }
 
 
+    .fLogo img{
+        height: 4vh;
     
+    }
 }
 
 
