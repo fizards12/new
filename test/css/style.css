@@ -166,7 +166,9 @@ html,body{
 
 @media (max-width: 767px) {
     .device-name{font-size: 35px;}
-    
+    .body-container{
+        height: 85%;
+    }
     
     .top-bar-contents{
         padding-top: 2px;
@@ -174,7 +176,7 @@ html,body{
         display: block;
     }
     .Settings{
-        height: 75vh;
+        height:65vh;
     }
 
     .body-container{
