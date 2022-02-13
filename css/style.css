@@ -283,7 +283,6 @@ input[name="log"]:hover{
     align-items: center;
     justify-content: start;
     height: 50%;
-
     grid-template-columns: 25% 80%;
     grid-template-areas: "Icon Name";
     column-gap: 0.3vw;
@@ -291,6 +290,10 @@ input[name="log"]:hover{
 .AdSetIcon{
     grid-area: Icon;
     height: 60%;
+    width: 100%;
+}
+.AdSetIcon img{
+    height: 100%;
     width: 100%;
 }
 
@@ -489,17 +492,16 @@ input[name="log"]:hover{
 }
 
 .Scontainer{
-    display: grid;
+    display: flex;
     grid-area: Scontainer;
-    grid-template-columns: auto auto;
-    column-gap: 4%;
-    grid-template-areas: "S1 S2";
 }
 
 .S1{
     grid-area: S1;
+    width: 50%;
 }
 .S2{
+    width: 50%;
     grid-area: S2;
 }
 .View{
@@ -681,17 +683,11 @@ input[name="View"]{
         align-self: flex-end;
     }
 
-    .Scontainer1{
-        grid-template-columns: auto 0px;
-        column-gap: 0px;
-    }
-    .Scontainer2{
-        grid-template-columns: 0px auto;
-        column-gap: 0px;
+    .dis{
+        width: 100%;
     }
     .inactive{
         display: none;
-        width: 0px;
     }
     .label{
         font-size: 20px;
@@ -792,6 +788,7 @@ input[name="View"]{
     }
     .adminName{
         font-size: 70%;
+        margin-bottom: 5%;
     }
 
 
