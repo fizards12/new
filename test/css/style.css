@@ -1,7 +1,4 @@
 
-*{
-    box-sizing: border-box;
-}
 
 html,body{
     height: 100%;
@@ -84,9 +81,6 @@ html,body{
 
 
 
-.device,.devices-pg{
-    height: 100%;
-}
 
 .btns-container{
     overflow-y:scroll;
@@ -143,8 +137,6 @@ html,body{
 }
 
 
-.device-name{font-size: 60px;}
-
 @media (min-width: 992px) {
     .dp{
         display: grid;
@@ -165,7 +157,7 @@ html,body{
 }
 
 @media (max-width: 767px) {
-    .device-name{font-size: 35px;}
+    .name{font-size: 35px;}
     .body-container{
         height: 85%;
     }
